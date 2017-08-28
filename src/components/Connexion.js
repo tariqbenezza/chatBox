@@ -26,9 +26,11 @@ class Connexion extends React.Component {
 		)
 	}
 
-	static contextTypes = {
-		router : React.PropTypes.object
-	}
+	static propTypes = {
+		addMessage: React.PropTypes.func.isRequired,
+		pseudo: React.PropTypes.string.isRequired,
+		length: React.PropTypes.number.isRequired
+	};
 }
 
 export default Connexion;
