@@ -7,7 +7,7 @@ class Connexion extends React.Component {
 		//Récupérer le pseudo
 		const pseudo = this.pseudoInput.value;
 		//Changer l'url
-		this.context.router.transitionTo(`/pseudo/${pseudo}`);
+		this.context.router.transitionTo(`/chatBox/pseudo/${pseudo}`);
 	};
 
 	render() {

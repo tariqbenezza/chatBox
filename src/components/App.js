@@ -13,7 +13,7 @@ class App extends React.Component {
 	}
 
 	componentWillMount() {
-		this.ref = base.syncState('/',{
+		this.ref = base.syncState('/chatBox/',{
 			context: this,
 			state: 'messages'
 		});
