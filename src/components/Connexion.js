@@ -12,13 +12,13 @@ class Connexion extends React.Component {
 
 	render() {
 		return (
-			<div className="connexionBox" onSubmit={e => this.goToChat(e)}>
-				<form className="connexion">
+			<div className="connexionBox">
+				<form className="connexion" onSubmit={(e) => this.goToChat(e)} >
 					<input 
 						type="text" 
 						placeholder="Pseudo" 
 						required 
-						ref={input => this.pseudoInput=input}
+						ref={input => {this.pseudoInput=input}}
 					/>
 					<button type="submit">GO</button>
 				</form>
@@ -26,10 +26,8 @@ class Connexion extends React.Component {
 		)
 	}
 
-	static propTypes = {
-		addMessage: React.PropTypes.func.isRequired,
-		pseudo: React.PropTypes.string.isRequired,
-		length: React.PropTypes.number.isRequired
+	static contextTypes = {
+		router: React.PropTypes.object
 	};
 }
 
